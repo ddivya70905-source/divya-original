@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .about-section {
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+        }
+        .about-image {
+            flex: 1;
+            text-align: center;
+        }
+        .about-image img {
+            width: 100%;
+            max-width: 450px;
+            border-radius: 20px;
+            box-shadow: var(--shadow);
+            border: 4px solid var(--border-color);
+        }
+        .about-content {
+            flex: 1.2;
+        }
+        .about-content h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            display: inline-block;
+            position: relative;
+        }
+        .about-content h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background-color: var(--primary-color);
+            bottom: -5px;
+            left: 0;
+            border-radius: 2px;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        .skill-item {
+            background-color: var(--card-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .skill-item:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+            transform: translateY(-3px);
+            border-color: var(--primary-color);
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+        }
+        @media (max-width: 992px) {
+            .about-section {
+                flex-direction: column;
+            }
+            .about-content h2::after {
+                left: 25%;
+            }
+            .about-content {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo"><i class="fa-solid fa-layer-group"></i> Portfolio</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="education.html">Education</a></li>
+                <li><a href="certifications.html">Certifications</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="container">
+        <div class="about-section">
+            <div class="about-image" data-aos="fade-right">
+                <img src="assets/img/image.jpeg" alt="Monisha S" onerror="this.src='https://via.placeholder.com/450x500?text=Profile+Photo'">
+            </div>
+            <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+                <h2>About Me</h2>
+                <p>Hello! I'm Monisha, a passionate Web Developer with a strong focus on creating clean, responsive, and visually appealing web applications. I enjoy turning complex problems into simple, beautiful, and intuitive designs.</p>
+                <p>When I'm not coding, you'll find me exploring new technologies, reading up on the latest design trends, or working on my personal projects to continuously improve my skills.</p>
+                
+                <h3 style="margin-top: 2.5rem; color: var(--text-color);">My Technical Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-item"><i class="fa-brands fa-html5" style="color: #e34c26; margin-right: 5px;"></i> HTML5</div>
+                    <div class="skill-item"><i class="fa-brands fa-css3-alt" style="color: #264de4; margin-right: 5px;"></i> CSS3</div>
+                    <div class="skill-item"><i class="fa-brands fa-js" style="color: #f0db4f; margin-right: 5px;"></i> JavaScript</div>
+                    <div class="skill-item"><i class="fa-brands fa-react" style="color: #61dbfb; margin-right: 5px;"></i> React.js</div>
+                    <div class="skill-item"><i class="fa-brands fa-node" style="color: #68a063; margin-right: 5px;"></i> Node.js</div>
+                    <div class="skill-item"><i class="fa-brands fa-git-alt" style="color: #f34f29; margin-right: 5px;"></i> Git</div>
+                    <div class="skill-item"><i class="fa-solid fa-mobile-screen" style="color: var(--text-color); margin-right: 5px;"></i> Responsive UI</div>
+                    <div class="skill-item"><i class="fa-solid fa-database" style="color: var(--text-color); margin-right: 5px;"></i> SQL / NoSQL</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="#"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <p class="footer-text">&copy; 2026 Monisha S. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
